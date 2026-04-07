@@ -1,0 +1,60 @@
+// Write a program which accepts number from user and display its factors in decreasing order
+
+/////////////////////////////////////////////////////////////////////////////////////
+//
+//  Required header files
+//
+/////////////////////////////////////////////////////////////////////////////////////
+
+#include<stdio.h>
+
+/////////////////////////////////////////////////////////////////////////////////////
+//
+//  Function Name :     NonFact
+//  Description :       It is used to display its Nonfactors in decreasing order
+//  Input :             Integer
+//  Output :            Integer
+//  Author :            Atharva Marne
+//  Date :              16/10/2025
+//
+/////////////////////////////////////////////////////////////////////////////////////
+
+void NonFact(int iNo)
+{
+    int iCnt = 0;
+
+    for(iCnt = 1; iCnt <= iNo; iCnt++)
+    {
+        if((iNo % iCnt)!=0)
+        {
+            printf("%d\t",iCnt);
+        }
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+//
+//  Entry point function of the application
+//
+/////////////////////////////////////////////////////////////////////////////////////
+
+int main()
+{
+    int iValue = 0;
+
+    printf("Enter the number : ");
+    scanf("%d",&iValue);
+
+    NonFact(iValue);
+
+    return 0;
+}
+
+/////////////////////////////////////////////////////////////////////////////////////
+//
+//  All test cases are successfully handled by the application
+//  
+//  Input : 12          Output : 5  7   8   9   10  11
+//  Input : 13          Output : 2  3   4   5   6   7   8   9   10  11  12
+//  Input : 10          Output : 3  4   6   7   8   9
+/////////////////////////////////////////////////////////////////////////////////////

@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+void Display()
+{
+    static char ch = 'A';
+
+    if(ch <= 'F')
+    {
+        printf("%c\t",ch);
+        ch++;
+        Display();
+    }
+    printf("\n");
+}
+
+int main()
+{
+    Display();
+
+    return 0;
+}
